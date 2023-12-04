@@ -42,7 +42,7 @@ public class CategoryServiceImpl implements CategoryService {
         Category category = Category.builder()
                 .description(reqCate.descriptions())
                 .name(reqCate.name())
-                .priority(reqCate.priority()).build();
+                .priority(reqCate.priority()).status(true).build();
         categoryRepository.save(category);
         return new CategoryDto(
                 category.getId(),

@@ -34,6 +34,7 @@ public class ProductServiceImpl implements ProductService {
                 .price(reqProduct.price())
                 .name(reqProduct.productName())
                 .category(category)
+                .status(true)
                 .build();
         productRepository.save(product);
         return new ProductDto(
